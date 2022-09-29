@@ -1,5 +1,3 @@
-from ast import Delete
-from urllib import request
 from .serializers import (PromoSerializer,AddPromoSerializer,PromoImageSerializer,
 UserRegisterSerializer,UserLoginSerializer, UserSerializer)
 from rest_framework.views import APIView
@@ -64,10 +62,14 @@ class LoginUser(APIView):
 
 @api_view(["GET"])
 def get_all(request: Request):
-     data = Promo.objects.prefetch_related('image')
-     list_data = PromoSerializer(data,many=True).data
-     # returns all the list of promos
-     return Response(list_data,status=status.HTTP_200_OK)
+     try:
+          data = Promo.objects.prefetch_related('image')
+          list_data = PromoSerializer(data,many=True).data
+          # returns all the list of promos
+          return Response(list_data,status=status.HTTP_200_OK)
+     except Exception as e:
+          print(e)
+          return Response({"details":"Something went wrong"},status=status.HTTP_404_NOT_FOUND)
 
 @api_view(["GET"])
 def get_detail_promo(request: Request,id):

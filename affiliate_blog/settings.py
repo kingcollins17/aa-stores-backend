@@ -28,8 +28,8 @@ SECRET_KEY = "django-insecure-=&%-=i5!n)=$u2^yh@0tq5d0h$=-6f)h-9$(ii5*jvt&yqo&mf
 DEBUG = True
 USE_S3 = False
 
-ALLOWED_HOSTS = ["https://aa-stores.herokuapp.com/","http://aa-stores.herokuapp.com/",
-                    "127.0.0.1:8000"]
+ALLOWED_HOSTS = ["https://aa-stores.herokuapp.com","http://aa-stores.herokuapp.com",
+                    "127.0.0.1"]
 
 
 # Application definition
@@ -117,13 +117,15 @@ CORS_ALLOW_HEADERS  = list(default_headers) + [
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "USER": "postgres",
-        "PASSWORD": "king2002",
-        "HOST": "localhost",
+        "USER": "avwenqxhjcxkqk",
+        "PASSWORD": "a185ec844889a95e40a210fcd668aae5cb45d7e5fc6e235b6296dcbe5d46cb57",
+        "HOST": "ec2-52-200-5-135.compute-1.amazonaws.com",
         "PORT": "5432",
-        "NAME": "blogdb"
+        "NAME": "d7iaph99hm8jl5"
     }
 }
+
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'knox.auth.TokenAuthentication',

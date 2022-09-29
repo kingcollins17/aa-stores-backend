@@ -6,7 +6,7 @@ from knox.views import LogoutAllView
 
 
 urlpatterns = [
-     path("blogs/",views.get_all),
+     path("blogs",views.get_all),
      path("blogs/<int:id>",views.get_detail_promo),
      path("auth/user",views.UserView.as_view()),
      path("auth/login/",views.LoginUser.as_view()),
