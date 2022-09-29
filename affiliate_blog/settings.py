@@ -28,7 +28,8 @@ SECRET_KEY = "django-insecure-=&%-=i5!n)=$u2^yh@0tq5d0h$=-6f)h-9$(ii5*jvt&yqo&mf
 DEBUG = True
 USE_S3 = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://aa-stores.herokuapp.com/","http://aa-stores.herokuapp.com/",
+                    "127.0.0.1:8000"]
 
 
 # Application definition
@@ -103,7 +104,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "https://sub.example.com",
     "http://localhost:80",
-    "http://127.0.0.1:9000",
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
 # CORS_ALLOW_ALL_HEADERS = True
