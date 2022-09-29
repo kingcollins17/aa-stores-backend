@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-=&%-=i5!n)=$u2^yh@0tq5d0h$=-6f)h-9$(ii5*jvt&yqo&mf
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-USE_S3 = False
+USE_S3 = True
 
 ALLOWED_HOSTS = ["https://aa-stores.herokuapp.com","http://aa-stores.herokuapp.com",
                     "127.0.0.1"]
@@ -78,8 +78,7 @@ TEMPLATES = [
 ]
 
 # if debug is false(production mode),set s3 to true
-if DEBUG == False:
-    USE_S3 = True
+
 
 if USE_S3 == True:
     # aws settings

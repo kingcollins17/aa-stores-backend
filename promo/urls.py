@@ -11,7 +11,7 @@ urlpatterns = [
      path("auth/user",views.UserView.as_view()),
      path("auth/login/",views.LoginUser.as_view()),
      path("auth/logout/",LogoutAllView.as_view()),
-     path("auth/register",views.RegisterUser.as_view()),
+     path("auth/register/",views.RegisterUser.as_view()),
      path("auth/blogs/<int:id>", views.PromoView.as_view()),
      path("blogs/image/<int:id>", views.post_image)
 

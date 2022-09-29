@@ -1,0 +1,1 @@
+web: gunicorn affiliate_blog.wsgi
